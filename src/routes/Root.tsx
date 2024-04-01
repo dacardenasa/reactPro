@@ -48,6 +48,16 @@ export default function Root() {
                 Users Page
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={"shopping"}
+                className={({ isActive }) =>
+                  isActive ? styles["nav-active"] : ""
+                }
+              >
+                Shopping Page
+              </NavLink>
+            </li>
           </ul>
         </nav>
         <div className={styles["detail"]}>
