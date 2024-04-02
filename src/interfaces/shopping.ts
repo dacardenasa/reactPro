@@ -9,4 +9,6 @@ export type Product = {
 export type ProductCardProps = {
   children?: ReactElement | ReactElement[];
   product: Product;
+  className?: string
+  style?: React.CSSProperties;
 };

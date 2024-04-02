@@ -4,7 +4,17 @@ import styles from "./productImage.module.css";
 import { useContext } from "react";
 import { ProductsContext } from "@/context";
 
-export const ProductImage = ({ uriImage = "" }) => {
+type ProductImageProps = {
+  uriImage?: string;
+  className?: string;
+  style?: React.CSSProperties;
+};
+
+export const ProductImage = ({
+  uriImage = "",
+  className,
+  style
+}: ProductImageProps) => {
   const { product } = useContext(ProductsContext);
   let imageToShow: string;
   if (uriImage) {
@@ -15,6 +25,11 @@ export const ProductImage = ({ uriImage = "" }) => {
     imageToShow = noImage;
   }
   return (
-    <img className={styles.productImg} src={imageToShow} alt="product-image" />
+    <img
+      className={`${styles.productImg} ${className}`}
+      src={imageToShow}
+      style={style}
+      alt="product-image"
+    />
   );
 };

@@ -1,0 +1,31 @@
+.shopping-container {
+  .title {
+    margin-bottom: 16px;
+  }
+  .products-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+}
+
+.bg-dark {
+  background-color: rgb(55, 55, 55);
+}
+.text-white {
+  color: #ffffff;
+}
+
+.custom-image {
+  padding: 12px;
+  border-radius: 16px;
+  width: calc(100% - 16px);
+}
+
+.custom-buttons {
+  > button,
+  div {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}

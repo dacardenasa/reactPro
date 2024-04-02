@@ -3,10 +3,17 @@ import { ProductsProvider } from "@/context";
 
 import styles from "../styles.module.css";
 
-export const ProductCard = ({ children, product }: ProductCardProps) => {
+export const ProductCard = ({
+  children,
+  product,
+  className,
+  style
+}: ProductCardProps) => {
   return (
     <ProductsProvider product={product}>
-      <div className={styles.productCard}>{children}</div>
+      <div style={style} className={`${styles.productCard} ${className}`}>
+        {children}
+      </div>
     </ProductsProvider>
   );
 };
