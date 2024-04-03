@@ -2,7 +2,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import { LazyAbout, LazyHome, LazyRoot, LazyTerms, LazyUsers } from "./imports";
 import UsersList from "@/pages/Users/pages/UsersList";
 import UsersForm from "@/pages/Users/pages/UsersForm";
-import Shopping from "@/pages/Shopping";
+import ShoppingPage from "@/pages/Shopping";
 
 export const routes = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/shopping",
-        element: <Shopping />
+        element: <ShoppingPage />
       },
       {
         path: "/users",

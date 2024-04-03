@@ -1,6 +1,5 @@
 import { ReactElement, createContext } from "react";
 
-import { useCounter } from "@/hooks";
 import { Product } from "@/interfaces";
 
 export type ProductsContextProps = {
@@ -13,12 +12,15 @@ export const ProductsContext = createContext({} as ProductsContextProps);
 
 export const ProductsProvider = ({
   children,
-  product
+  product,
+  counter,
+  handleIncreaseBy
 }: {
   children: ReactElement | ReactElement[];
   product: Product;
+  counter: number;
+  handleIncreaseBy: (fvalue: number) => void;
 }) => {
-  const { counter, handleIncreaseBy } = useCounter(0);
   return (
     <ProductsContext.Provider value={{ counter, handleIncreaseBy, product }}>
       {children}
