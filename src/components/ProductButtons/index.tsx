@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import styles from "./productButtons.module.css";
 import { ProductsContext } from "@/context";
 
@@ -8,7 +8,11 @@ type ProductButtonsProps = {
 };
 
 export const ProductButtons = ({ className, style }: ProductButtonsProps) => {
-  const { counter, handleIncreaseBy } = useContext(ProductsContext);
+  const { counter, handleIncreaseBy, maxCount } = useContext(ProductsContext);
+  const isMaxCountReached = useMemo(
+    () => maxCount === counter,
+    [counter, maxCount]
+  );
   return (
     <div className={`${styles.buttonsContainer} ${className}`} style={style}>
       <button
@@ -18,7 +22,12 @@ export const ProductButtons = ({ className, style }: ProductButtonsProps) => {
         -
       </button>
       <div className={styles.countLabel}>{counter}</div>
-      <button className={styles.buttonAdd} onClick={() => handleIncreaseBy(1)}>
+      <button
+        className={`${styles.buttonAdd} ${
+          isMaxCountReached ? styles.disabled : ""
+        }`}
+        onClick={() => handleIncreaseBy(1)}
+      >
         +
       </button>
     </div>

@@ -7,6 +7,11 @@
     flex-wrap: wrap;
     margin-top: 16px;
   }
+  .handlers-actions-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .bg-dark {
@@ -24,8 +29,8 @@
 .custom-buttons {
   > button,
   div {
-    color: #ffffff;
-    border-color: #ffffff;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
   }
 }
 

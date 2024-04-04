@@ -1,8 +1,8 @@
 import { ProductCardProps } from "@/interfaces";
 import { ProductsProvider } from "@/context";
+import { useProduct } from "@/hooks";
 
 import styles from "../styles.module.css";
-import { useCounter } from "@/hooks";
 
 export const ProductCard = ({
   children,
@@ -10,13 +10,34 @@ export const ProductCard = ({
   className,
   style,
   onChange,
-  value
+  value,
+  initialValues
 }: ProductCardProps) => {
-  const { counter, handleIncreaseBy } = useCounter({ onChange, product, value });
+  const { counter, maxCount, isMaxCountReached, handleIncreaseBy, reset } =
+    useProduct({
+      onChange,
+      product,
+      value,
+      initialValues
+    });
   return (
-    <ProductsProvider {...{ counter, product, handleIncreaseBy }}>
+    <ProductsProvider
+      {...{
+        counter,
+        product,
+        handleIncreaseBy,
+        maxCount: initialValues?.maxCount
+      }}
+    >
       <div style={style} className={`${styles.productCard} ${className}`}>
-        {children}
+        {children({
+          count: counter,
+          isMaxCountReached,
+          maxCount,
+          product,
+          handleIncreaseBy,
+          reset
+        })}
       </div>
     </ProductsProvider>
   );

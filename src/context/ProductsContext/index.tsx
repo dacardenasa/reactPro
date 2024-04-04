@@ -5,24 +5,27 @@ import { Product } from "@/interfaces";
 export type ProductsContextProps = {
   counter: number;
   handleIncreaseBy: (value: number) => void;
+  maxCount?: number;
   product: Product;
+};
+
+export type ProductProviderProps = ProductsContextProps & {
+  children: ReactElement | ReactElement[];
 };
 
 export const ProductsContext = createContext({} as ProductsContextProps);
 
 export const ProductsProvider = ({
   children,
-  product,
   counter,
-  handleIncreaseBy
-}: {
-  children: ReactElement | ReactElement[];
-  product: Product;
-  counter: number;
-  handleIncreaseBy: (fvalue: number) => void;
-}) => {
+  handleIncreaseBy,
+  maxCount,
+  product
+}: ProductProviderProps) => {
   return (
-    <ProductsContext.Provider value={{ counter, handleIncreaseBy, product }}>
+    <ProductsContext.Provider
+      value={{ counter, handleIncreaseBy, product, maxCount }}
+    >
       {children}
     </ProductsContext.Provider>
   );
