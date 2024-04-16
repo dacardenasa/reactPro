@@ -3,7 +3,7 @@ import {
   ProductCard,
   ProductImage,
   ProductTitle
-} from "@/components";
+} from "dc-product-card-pro";
 
 import { products } from "./mockData";
 

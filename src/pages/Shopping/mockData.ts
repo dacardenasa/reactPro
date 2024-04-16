@@ -3,8 +3,8 @@ import { Product } from "@/interfaces";
 export const products: Product[] = [
   {
     id: "1",
-    title: "Cofee Mug - CardById",
-    uriImage: "/coffee-mug.png"
+    title: "Cofee Mug - without image",
+    // uriImage: "/coffee-mug.png"
   },
   {
     id: "2",
