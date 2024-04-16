@@ -1,6 +1,7 @@
 import { useContext, useMemo } from "react";
-import styles from "./productButtons.module.css";
 import { ProductsContext } from "@/context";
+
+import styles from "./productButtons.module.css";
 
 type ProductButtonsProps = {
   className?: string;

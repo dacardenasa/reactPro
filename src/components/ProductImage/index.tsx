@@ -1,8 +1,8 @@
-import noImage from "@assets/no-image.jpg";
+import { useContext } from "react";
+
+import { ProductsContext } from "@/context";
 
 import styles from "./productImage.module.css";
-import { useContext } from "react";
-import { ProductsContext } from "@/context";
 
 type ProductImageProps = {
   uriImage?: string;
@@ -22,7 +22,7 @@ export const ProductImage = ({
   } else if (product.uriImage) {
     imageToShow = product.uriImage;
   } else {
-    imageToShow = noImage;
+    imageToShow = "https://image-test-aws.s3.us-west-1.amazonaws.com/no-image.jpg";
   }
   return (
     <img

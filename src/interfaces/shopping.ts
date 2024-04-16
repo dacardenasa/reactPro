@@ -26,7 +26,6 @@ export type ProductCardHandlers = {
 };
 
 export type ProductCardProps = {
-  // children?: ReactElement | ReactElement[];
   children: (props: ProductCardHandlers) => ReactElement;
   product: Product;
   className?: string;

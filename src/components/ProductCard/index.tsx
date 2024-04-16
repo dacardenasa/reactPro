@@ -2,7 +2,7 @@ import { ProductCardProps } from "@/interfaces";
 import { ProductsProvider } from "@/context";
 import { useProduct } from "@/hooks";
 
-import styles from "../styles.module.css";
+import styles from "./productCard.module.css";
 
 export const ProductCard = ({
   children,

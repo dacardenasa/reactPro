@@ -16,32 +16,13 @@ const ShoppingPage = () => {
       <hr />
       <ProductCard
         product={products[0]}
-        className="bg-dark text-white"
         initialValues={{ count: 6, maxCount: 10 }}
       >
-        {({ isMaxCountReached, handleIncreaseBy, reset }) => (
+        {() => (
           <>
-            <ProductImage className="custom-image" />
+            <ProductImage />
             <ProductTitle />
-            <ProductButtons className="custom-buttons" />
-            <div className="handlers-actions-box">
-              <button title="reset" onClick={reset}>
-                Reset
-              </button>
-              <button title="decreaseBy2" onClick={() => handleIncreaseBy(-2)}>
-                {" "}
-                -2{" "}
-              </button>
-              {!isMaxCountReached ? (
-                <button
-                  title="increaseBy2"
-                  onClick={() => handleIncreaseBy(+2)}
-                >
-                  {" "}
-                  +2{" "}
-                </button>
-              ) : null}
-            </div>
+            <ProductButtons />
           </>
         )}
       </ProductCard>

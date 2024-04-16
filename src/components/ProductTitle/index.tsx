@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import styles from "./productTitle.module.css";
 import { ProductsContext } from "@/context";
+
+import styles from "./productTitle.module.css";
 
 type ProductTitleProps = {
   title?: string;
