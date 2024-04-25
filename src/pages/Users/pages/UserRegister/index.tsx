@@ -36,7 +36,7 @@ export const UserRegister = () => {
           type="text"
           value={userName}
         />
-        {!userName.trim().length && <span>Este campo es obligatorio!</span>}
+        {!userName.trim().length && <span>This field is required!</span>}
         <input
           className={!isValidEmail(userEmail) ? "has-error" : ""}
           name="userEmail"
@@ -45,7 +45,7 @@ export const UserRegister = () => {
           type="email"
           value={userEmail}
         />
-        {!isValidEmail(userEmail) && <span>Este email no es valido!</span>}
+        {!isValidEmail(userEmail) && <span>This email is not valid!</span>}
         <input
           name="password"
           onChange={(e) => handleChangeField("password", e.target.value)}
@@ -53,9 +53,9 @@ export const UserRegister = () => {
           type="password"
           value={password}
         />
-        {!password.trim().length && <span>Este campo es obligatorio!</span>}
+        {!password.trim().length && <span>This field is required!</span>}
         {password.trim().length > 0 && password.trim().length < 6 && (
-          <span>El password debe tener minimo 6 caracteres!</span>
+          <span>This password must have six characters minimum!</span>
         )}
         <input
           name="passwordConfirm"
@@ -65,10 +65,10 @@ export const UserRegister = () => {
           value={passwordConfirm}
         />
         {!passwordConfirm.trim().length && (
-          <span>Este campo es obligatorio!</span>
+          <span>This field is required!</span>
         )}
         {passwordConfirm.trim().length > 0 && password !== passwordConfirm && (
-          <span>Los passwords deben ser iguales!</span>
+          <span>The passwords must be the same!</span>
         )}
         <button type="submit" title="submit">
           Create Account

@@ -14,6 +14,18 @@ export default function Users() {
         <li>
           <NavLink to={"/users/registerForm"}>Register User</NavLink>
         </li>
+        <li>
+          <NavLink to={"/users/formikBasicPage"}>Formik Basic Page</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/users/formikYupPage"}>Formik Yup Page</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/users/formikComponents"}>Formik Components Page</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/users/formikAbstract"}>Formik Abstract Page</NavLink>
+        </li>
       </ul>
       <div>
         <Outlet />

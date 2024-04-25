@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import { LazyAbout, LazyHome, LazyRoot, LazyTerms, LazyUsers } from "./imports";
-import { UserRegister, UsersForm, UsersList } from "@/pages/Users/pages";
+import { FormikAbstract, FormikBasicPage, FormikComponents, FormikYupPage, UserRegister, UsersForm, UsersList } from "@/pages/Users/pages";
 
 export const routes = createBrowserRouter([
   {
@@ -42,6 +42,22 @@ export const routes = createBrowserRouter([
           {
             path: "/users/registerForm",
             element: <UserRegister />
+          },
+          {
+            path: "/users/formikBasicPage",
+            element: <FormikBasicPage />
+          },
+          {
+            path: "/users/formikYupPage",
+            element: <FormikYupPage />
+          },
+          {
+            path: "/users/formikComponents",
+            element: <FormikComponents />
+          },
+          {
+            path: "/users/formikAbstract",
+            element: <FormikAbstract />
           },
           {
             path: "/users/*",
