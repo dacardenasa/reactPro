@@ -28,6 +28,7 @@
       "@assets/*": ["src/assets/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
+      "@styles/*": ["src/styles/*"],
     },
   },
   "include": ["src"],
