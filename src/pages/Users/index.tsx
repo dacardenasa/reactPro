@@ -11,6 +11,9 @@ export default function Users() {
         <li>
           <NavLink to={"/users/usersForm"}>User Form</NavLink>
         </li>
+        <li>
+          <NavLink to={"/users/registerForm"}>Register User</NavLink>
+        </li>
       </ul>
       <div>
         <Outlet />

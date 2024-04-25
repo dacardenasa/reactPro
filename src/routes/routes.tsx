@@ -1,7 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import { LazyAbout, LazyHome, LazyRoot, LazyTerms, LazyUsers } from "./imports";
-import UsersList from "@/pages/Users/pages/UsersList";
-import UsersForm from "@/pages/Users/pages/UsersForm";
+import { UserRegister, UsersForm, UsersList } from "@/pages/Users/pages";
 
 export const routes = createBrowserRouter([
   {
@@ -39,6 +38,10 @@ export const routes = createBrowserRouter([
           {
             path: "/users/usersForm",
             element: <UsersForm />
+          },
+          {
+            path: "/users/registerForm",
+            element: <UserRegister />
           },
           {
             path: "/users/*",
