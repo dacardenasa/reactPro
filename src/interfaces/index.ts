@@ -1,0 +1,1 @@
+export type TextFieldTypes = "text" | "email" | "password";

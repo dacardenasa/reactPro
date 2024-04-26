@@ -14,6 +14,8 @@ export default defineConfig({
       "@routes": path.resolve(__dirname, "./src/routes"),
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@utils": path.resolve(__dirname, "./src/utils"),
+      "@data": path.resolve(__dirname, "./src/data"),
+      "@interfaces": path.resolve(__dirname, "./src/interfaces"),
     }
   },
   plugins: [react(), manualChunksPlugin()]

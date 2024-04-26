@@ -1,0 +1,61 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "Type your firstName",
+    "label": "Firstname",
+    "value": "",
+    "validations": [
+        {
+            "type": "required"
+        },
+        {
+            "type": "minLength",
+            "value": 5
+        }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "lastName",
+    "placeholder": "Type your lastName",
+    "label": "Lastname",
+    "value": "",
+    "validations": [
+        {
+            "type": "required"
+        }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Type your email address",
+    "label": "Email address",
+    "value": "",
+    "validations": [
+        {
+            "type": "required"
+        },
+        {
+            "type": "email"
+        }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      { "id": 1, "label": "Resident Evil" },
+      { "id": 2, "label": "Metal Gear" },
+      { "id": 3, "label": "Stellar Blade" }
+    ],
+    "validations": [
+        {
+            "type": "required"
+        }
+    ]
+  }
+]

@@ -1,9 +1,10 @@
+import { TextFieldTypes } from "@/interfaces";
 import { ErrorMessage, useField } from "formik";
 
 type InputFieldProps = {
   label: string;
   name: string;
-  type?: "text" | "email" | "password";
+  type?: TextFieldTypes;
   placeholder?: string;
   [x: string]: any;
 };

@@ -5,3 +5,5 @@ export * from './FormikBasicPage';
 export * from './FormikYupPage';
 export * from './FormikComponents';
 export * from './FormikAbstract';
+export * from './UserRegisterFormik';
+export * from './DynamicForm';
