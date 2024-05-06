@@ -1,6 +1,11 @@
+import { Page } from "dc-custom-component";
+
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <section style={{ backgroundColor: "white" }}>
+      <h1>Home</h1>
+      <Page />
+    </section>
   );
 };
 
